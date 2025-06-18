@@ -1,0 +1,134 @@
+[
+    {
+        "ID": "FTA001",
+        "stix_id": "",
+        "name": "Reconnaissance",
+        "description": "The adversary gathers information on potential targets to inform future fraudulent activities. This could involve collecting publicly available data, purchasing stolen credentials or personal information, and probing for vulnerabilities in systems.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA002",
+        "stix_id": "",
+        "name": "Resource Development",
+        "description": "In this phase, adversaries acquire and develop resources they require to conduct their attacks. This may include setting up infrastructure such as phishing websites, creating mule accounts for receiving stolen funds, or even recruiting collaborators.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA003",
+        "stix_id": "",
+        "name": "Initial Access",
+        "description": "This tactic involves the methods fraudsters use to gain initial footholds in a system or network. They may use various techniques such as stolen credentials, phishing attacks, or exploiting vulnerabilities in software to access accounts or systems and prepare for subsequent fraudulent activities.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA004",
+        "stix_id": "",
+        "name": "Execution",
+        "description": "The Execution tactic refers to the manner in which an attacker runs malicious code or performs actions that facilitate fraudulent activities. It could involve running scripting tools on a compromised computer to automate collection of financial information or executing unauthorized transactions directly.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA005",
+        "stix_id": "",
+        "name": "Defense Evasion & Obfuscation",
+        "description": "Frauds often use techniques to avoid detection by hiding their activities or making their actions look legitimate. Defense evasion might include crafting transactions to bypass fraud detection algorithms, and obfuscation refers to disguising the true nature and source of those transactions.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA006",
+        "stix_id": "",
+        "name": "Lateral Movement & Internal Proliferation",
+        "description": "After gaining initial access, the fraudster moves laterally within the network to gain wider access to accounts and resources. They may attempt to spread to other systems, or proliferate internally within the system, increasing the scope of their fraudulent reach.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA007",
+        "stix_id": "",
+        "name": "Manipulation & Fraudulent Transactions",
+        "description": "This tactic covers the direct manipulation of systems or accounts to perform unauthorized transactions. It could range from small test transactions to check for detection to large scale unauthorized transfers or payment alterations.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA008",
+        "stix_id": "",
+        "name": "Command and Control",
+        "description": "The attackers establish a method to control and remotely direct activities within the compromised system. For financial systems, this could involve creating backdoor access to maintain persistent control or remotely initiating fraudulent transactions when desired.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA009",
+        "stix_id": "",
+        "name": "Collection & Exfiltration",
+        "description": "This tactic entails the compilation and extraction of valuable data from the victim's network. Fraudsters may collect personal identification information, payment card details, or corporate financial information, with the intent of using or selling this stolen data.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA010",
+        "stix_id": "",
+        "name": "Financial Evasion, Laundering & Cash-Out",
+        "description": "After successfully committing fraud, attackers use techniques to evade detection by financial authorities, launder money through various channels, and ultimately 'cash out' by converting illicit gains into usable funds or assets without alerting law enforcement.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA011",
+        "stix_id": "",
+        "name": "Impact & Disruption",
+        "description": "Attacks within this tactic focus on creating havoc, which may involve disrupting financial operations or damaging a victim\u2019s financial reputation. This could act as a smokescreen for theft or as a direct effort to destabilize an entity.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    },
+    {
+        "ID": "FTA012",
+        "stix_id": "",
+        "name": "Obfuscation and Destruction of Evidence",
+        "description": "Once fraud has been committed, attackers might seek to cover their tracks by obfuscating their activities and destroying evidence. This could include wiping logs, using encryption to hide stolen data, or otherwise hindering investigation and attribution efforts.",
+        "url": "",
+        "created": "01/30/2024",
+        "last_modified": "01/30/2024",
+        "domain": "fraud-attack",
+        "version": "V.1"
+    }
+]

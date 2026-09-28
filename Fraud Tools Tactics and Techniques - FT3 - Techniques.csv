@@ -263,25 +263,21 @@ Installing and maintaining an Intrusion Detection System (IDS) or an Intrusion P
 Continuous monitoring of security logs for anomalous activities that could indicate attempts to gain unauthorized server access.
 
 Use by Fraud Detection and Analysis Teams: Fraud detection and analysis teams should closely monitor the integrity of transactional data and access logs. In the case of a financial institution, anomalies in transaction processing or unusual administrative activities may signal unauthorized access to servers. Teams should also keep abreast of the latest threat intelligence reports to understand emerging tactics and adjust defensive measures accordingly. Engaging in proactive threat hunting within the network can help uncover covert attempts to acquire server access before they result in financial losses or data breaches.",,TRUE,FT008,,,,,,,,
-FT007.005,,Acquire Access: VPS,"Adversaries may seek to acquire control over Virtual Private Servers (VPS) as they provide an anonymized platform to conduct illicit activities. Given their scalability, reliability, and remote access, VPSs are attractive to attackers for hosting malware command and control (C2) servers, phishing websites, or as pivot points for further attacks against financial targets.
+FT007.005,,Acquire Access: Hijacked VPS,"Adversaries may take unauthorized control of an existing Virtual Private Server (VPS) instance or account to gain a remote platform for financial fraud. A hijacked VPS offers scalability and reliable access while obscuring the adversary's own infrastructure. It can host malware command and control (C2) servers or phishing websites, or serve as a pivot point for attacks against financial targets.
 
-Execution: Attackers might exploit weak VPS credentials, leverage stolen credit card details to purchase VPS services illicitly, or utilize vulnerabilities in VPS management software to gain unauthorized access. Once control is established, attackers can use these servers to launch various attacks on financial systems, including but not limited to DDoS attacks, data exfiltration, or hosting malicious sites to capture user credentials.
+Execution: Attackers may use compromised VPS credentials, guess weak passwords, or exploit vulnerabilities in VPS management software to take over an existing account or instance. Once in control, they may launch DDoS attacks, exfiltrate data, or host malicious sites that capture financial customers' credentials.
 
 Examples:
 
-- Conducting brute force or dictionary attacks to guess weak passwords used for VPS management consoles.
-- Purchasing VPS services using stolen financial details and using the service to facilitate fraudulent activity.
-- Scanning for and exploiting vulnerabilities in the infrastructure software that manages the VPS, such as hypervisors or control panels.
+- Conducting brute force or dictionary attacks against the management console of an existing VPS account.
+- Using stolen VPS account credentials to change access settings and operate an existing instance without the owner's authorization.
+- Exploiting vulnerabilities in a VPS control panel or other management software to gain unauthorized control.
 
-Goals: The primary objective for adversaries in acquiring access to a VPS in the context of financial fraud is to facilitate anonymity while conducting attacks, thus avoiding detection and maintaining persistence in their fraudulent activities. VPSs can be used to mask the attacker's location and IP details, host phishing pages, store stolen data, run botnets, or masquerade as legitimate entities in financial transactions.",,1/30/24,1/30/24,ft3,V.1,Resource Development,"Implementing strong, complex password policies and multi-factor authentication for VPS management.
+Goals: The adversary may use the hijacked VPS to hide their location and IP address, maintain a foothold, host phishing pages, store stolen data, run botnets, or masquerade as a legitimate entity in financial transactions.",,1/30/24,9/27/26,ft3,V.1,Resource Development,"VPS owners and providers can review available authentication and management logs for failed login bursts followed by a successful login, access from an unfamiliar location or device, unexpected account recovery or MFA changes, new administrative users or keys, and unapproved changes to instance or network settings. Compare these events with the owner's authorized activity; a login anomaly alone does not establish a takeover. MFA, strong credentials, and timely patching can reduce opportunities for unauthorized access.
 
-Regularly scanning and updating the VPS infrastructure to patch against known vulnerabilities.
-Employing network monitoring solutions that can detect and flag unusual behavior indicative of a compromised VPS.
+Provider or owner network telemetry may reveal newly hosted phishing pages, unusual outbound connections, or other misuse after control changes. Those downstream signals warrant investigation but do not by themselves show how the VPS was acquired. Reports of phishing or financial fraud can help identify affected infrastructure and support provider action.
 
-Encouraging customers to report phishing or fraudulent activities hosted on VPS managed by financial institutions.
-Blacklisting and taking down malicious domains quickly that are identified as being used for financial fraud.
-
-Use by Fraud Detection and Analysis Teams: Fraud detection teams should actively monitor for patterns of traffic or activity originating from VPS services that could be indicative of financial cyber fraud. This includes trends in transaction locations that do not match the user's known profile, volumes of requests that exceed typical patterns, or connections to known bad IPs or domains. Continuous threat intelligence gathering is essential to stay updated on new TTPs (tactics, techniques, and procedures) being used to exploit VPS servers. Additionally, close cooperation with VPS providers can aid in the fast shutdown of services being used for fraudulent purposes.",,TRUE,FT008,,,,,,,,
+Use by Fraud Detection and Analysis Teams: Financial institutions may see transactions or requests from VPS addresses, anomalous transaction locations, unusually high request volumes, or links to known malicious domains. These are possible downstream misuse signals, not direct evidence of VPS hijacking. When warranted, coordinate with the VPS owner or provider to correlate them with authorization and management events before attributing the activity to a hijacked VPS.",,TRUE,FT008,,,,,,,,
 FT007.006,,Acquire Access: Virtual Private Network,"Adversaries focused on financial cyber fraud may acquire access to Virtual Private Network (VPN) services, not necessarily to compromise the VPN infrastructure itself, but rather to utilize the service to anonymize their activities or to create the appearance of legitimacy when conducting fraudulent operations. A VPN can mask an attacker's true location and IP address, making it more challenging to trace illicit activities back to the source.
 
 Execution: To undertake such clandestine endeavors, attackers may purchase or compromise VPN accounts, often leveraging stolen credit card information to set up the service. Alternatively, they might exploit VPN account login credentials obtained through phishing attacks or credential leaks. Once obtained, these VPN services provide a secure and seemingly trustworthy connection to the internet, allowing fraudsters to conduct their activities with reduced risk of exposure.
@@ -306,30 +302,21 @@ Encouraging customers to report unauthorized transactions or account activities 
 Use by Fraud Detection and Analysis Teams: 
 
 Fraud detection teams should maintain a high level of scrutiny over access and transactions conducted through VPNs. Automated detection mechanisms can be employed to flag access from VPN services and ensure that subsequent actions are subject to enhanced verification. Collaboration with VPN providers could be established to facilitate the rapid suspension of services being exploited for fraudulent means. In the event that VPN-facilitated fraud is detected, teams must act swiftly to trace the activity, mitigate the damage, and adjust security postures to preempt future attacks of a similar nature.",,TRUE,FT008,,,,,,,,
-FT007.007,,Acquire Access: Virtual Private Server,"Adversaries may acquire access to Virtual Private Servers (VPS) to establish a platform from which to conduct financial fraud activities discreetly and effectively. A VPS offers the benefits of a dedicated server with the added flexibility and privacy that adversaries require to mount sophisticated and hard-to-trace attacks on financial systems or to obfuscate their fraudulent transactions.
+FT007.007,,Acquire Access: Rented VPS,"Adversaries may rent or provision Virtual Private Server (VPS) services with stolen payment information to establish infrastructure for financial fraud. A VPS offers a flexible, remotely accessible platform that can obscure the operator's identity while supporting attacks on financial systems or fraudulent transactions.
 
-Execution: Attackers may gain access to VPSs by renting them using stolen financial information or by compromising them through vulnerabilities. Once under their control, these digital strongholds can be used to facilitate a variety of fraudulent endeavors, ranging from hosting phishing websites to serving as a relay for laundering stolen funds.
+Execution: Attackers may sign up for VPS services using stolen card or other payment details and provision instances under accounts they control. They can then use those instances to host phishing websites, operate malware command and control (C2) services, relay traffic, or support schemes involving stolen funds. The acquisition method here is fraudulent payment for a newly rented service.
 
 Examples:
 
-Purchasing VPS services with stolen credit card details to mask the true identity and location of the fraudster.
-Gaining unauthorized access to VPS accounts by exploiting insecure management interfaces or weak authentication practices.
-Brute-forcing or using leaked credentials to hijack existing VPS accounts, which are then used for clandestine activities.
-Goals: Adversaries leverage VPS access to:
+- Purchasing VPS services with stolen credit card details to obscure the fraudster's identity and location.
+- Creating a new VPS account with stolen payment information and provisioning instances to host fake banking or payment portals.
+- Renting multiple VPS instances with stolen payment details to relay traffic for fraudulent activity.
 
-Mask their online identities, ensuring that fraudulent activities cannot be easily traced back to their real IP addresses.
-Set up and operate command and control centers for malware campaigns without being detected by law enforcement or cybersecurity teams.
-Host fake banking sites, payment portals, or financial services to scam users out of their credentials and funds.",,1/30/24,1/30/24,ft3,V.1,Resource Development,"Implement stringent identity verification measures for individuals renting VPS services to prevent the fraudulent acquisition of these services.
+Goals: Adversaries may use rented VPS infrastructure to mask their IP addresses, operate malware campaigns, or host fake banking sites and payment portals that steal customers' credentials and funds.",,1/30/24,9/27/26,ft3,V.1,Resource Development,"VPS providers can review available signup, billing, and provisioning records for suspicious combinations of account details, payment authorization failures, repeated payment attempts, rapid instance creation, or later chargebacks and stolen-payment reports. Verify payment and account ownership through appropriate provider processes; any one indicator can have a legitimate explanation and does not prove stolen payment use.
 
-Applying best security practices, including the use of multi-factor authentication and secure password policies, for VPS management interfaces.
+Provider account and network telemetry may show newly provisioned instances hosting phishing pages, unusual outbound traffic, or other abuse. Such activity can support an investigation but does not establish that the VPS was rented with stolen payment information. Providers can correlate it with signup and payment evidence before taking account action.
 
-Using advanced threat detection systems to monitor for suspicious patterns of behavior consistent with VPS misuse, such as irregular access or the use of VPS for high volumes of financial transactions.
-
-Monitoring outbound network traffic from the VPS for unusual patterns that may indicate fraudulent activity.
-
-Use by Fraud Detection and Analysis Teams: 
-
-Fraud detection and analysis teams need to be vigilant for signs of VPS misuse in financial transactions. This includes tracking the origination points of transactions to identify patterns associated with anonymizing services like VPS. Teams should use behavior-based analysis tools to detect anomalies in transaction flows that may suggest the involvement of a VPS. When VPS-related fraud is suspected, close coordination with VPS providers can help to quickly shut down the offending servers and conduct an investigation into the fraudsters' tactics, techniques, and procedures.",,TRUE,FT008,,,,,,,,
+Use by Fraud Detection and Analysis Teams: Financial institutions may observe transactions or requests from VPS addresses, anomalous transaction flows, or links to fake banking and payment sites. These are downstream fraud signals, not proof of a stolen-payment VPS rental. When warranted, coordinate with the VPS provider and payment issuer to investigate the account, payment, and provisioning records alongside the observed activity.",,TRUE,FT008,,,,,,,,
 FT007.008,,Acquire Access: Cloud Accounts,"Malicious actors involved in financial cyber fraud may acquire access to cloud computing accounts for the purpose of leveraging the cloud’s vast resources to conduct fraudulent activities. This includes both compromising legitimate organizations’ cloud accounts and procuring cloud resources using fraudulent financial information. By utilizing cloud accounts, attackers can benefit from reliable, scalable, and often anonymously-accessible infrastructure to support various phases of their fraudulent operations.
 
 Execution: 

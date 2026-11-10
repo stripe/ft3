@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use FT3, please cite it using the metadata below."
+title: "FT3: Fraud Tools, Tactics, and Techniques Framework"
+type: dataset
+abstract: >-
+  FT3 is a framework for describing fraud tactics and techniques,
+  published as tactics and techniques in JSON and CSV.
+authors:
+  - given-names: Vincent
+    family-names: Passaro
+    affiliation: Stripe
+    website: "https://www.vincentpassaro.com/ft3"
+  - name: Stripe
+repository-code: "https://github.com/stripe/ft3"
+license: MIT
+keywords:
+  - fraud
+  - fraud detection
+  - threat intelligence
+  - tactics and techniques
+  - FT3
+date-released: 2025-07-28

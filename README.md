@@ -60,6 +60,10 @@ Predefined procedures for organizational response to detected fraud events, aime
 
 This enhanced context focuses on the specific tactics, techniques, and procedures related to fraud, making it more applicable to your goals.
 
+## Date format
+
+The `created` and `last_modified` fields in `FT3_Tactics.json`, `FT3_Techniques.json` and the matching CSV files are calendar dates written month first as `MM/DD/YYYY`, with a zero-padded month and day and a four-digit year. For example, `01/30/2024` is January 30, 2024. The values are not ISO 8601 and carry no time or time zone.
+
 ## Contributing
 
 We welcome contributions to the FT3 framework from the community! Here are some ways you can help:
